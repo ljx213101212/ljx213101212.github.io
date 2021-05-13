@@ -1,0 +1,1 @@
+import{r as e,a as t}from"./vendor.06ecf094.js";function r(){return t.exports.createElement("div",{className:"App"},"十饮冰泉，热血未凉")}const n=document.getElementById("root");e.exports.render(t.exports.createElement(r,null),n);
