@@ -176,10 +176,10 @@ const Nav = () => {
             </div>
             <div className="ml-3">
               <div className="text-base font-medium leading-none text-white">
-                Tom Cook
+                Jixiang Li
               </div>
               <div className="text-sm font-medium leading-none text-gray-400">
-                tom@example.com
+                lijixiang.nus@google.com (please replace google to gmail)
               </div>
             </div>
           </div>
