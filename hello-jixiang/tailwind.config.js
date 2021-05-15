@@ -19,6 +19,15 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
+    flex: {
+      '1' : '1 1 0%',
+      'auto' : '1 1 auto',
+      'none': 'none',
+      'gold-prev': '1 1 33.3333%',
+      'gold-after': '1 1 66.6666%',
+      '5': '1 1 41.6667%;',
+      '7': '1 1 58.3333%'
+    }
   },
   variants: {},
   plugins: []
