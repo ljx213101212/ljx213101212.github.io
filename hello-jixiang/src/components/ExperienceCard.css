@@ -1,0 +1,49 @@
+.card {
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    transition: all .2s ease-out;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card h4 {
+    font-size: .9rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.card-title {
+    margin-bottom: .75rem;
+}
+.text-muted {
+    color: rgba(0,0,0,.54)!important;
+}
+.exp-title {
+    text-transform: none!important;
+}
+.exp-company {
+    font-weight: 400!important;
+    text-transform: none!important;
+}
+.exp-meta {
+    font-size: .8rem;
+}
+
+
+
+
+

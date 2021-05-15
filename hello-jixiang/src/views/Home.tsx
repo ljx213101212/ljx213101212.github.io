@@ -1,16 +1,54 @@
 import React from 'react';
-import Header from '../components/Header';
-
 //@ts-ignore
 import avatarUrl from "assets/me.jpeg";
 
+//[proj]
+import ExperienceCard from "components/ExperienceCard"
+
+
+const razerExp = {
+    title: "Software Engineer",
+    company: "Razer",
+    companyLink: "https://www.razer.com/",
+    startTime: "June 2018",
+    endTime: "Present",
+    location: "Singapore"
+}
+
+const dhiExp = {
+    title: "Software Developer",
+    company: "DHI",
+    companyLink: "https://www.dhigroup.com/",
+    startTime: "Aug 2016",
+    endTime: "May 2018",
+    location: "Singapore"
+}
+
+const myExps = [razerExp, dhiExp];
+
+
+const Experience = () => {
+    return (
+        <>
+            {
+                myExps.map((exp) => {
+                    return (
+                        <div className="flex justify-center">
+                            <ExperienceCard {...exp}></ExperienceCard>
+                        </div>
+                    )
+                })
+            }
+        </>
+    )
+}
 
 const Home = () => {
     return (
         <React.Fragment>
             {/* <Header title="Biography" /> */}
             <div className="container items-center mx-auto px-4 leading-normal">
-                <div className="md:flex">
+                <section className="md:flex aboutme">
                     <div className="md:flex justify-center flex-gold-prev">
                         <div className="md:flex flex-col p-4 justify-items-center items-center">
                             <img className="md:w-24 rounded-full m-auto w-40" src={avatarUrl} alt="Avatar" />
@@ -60,18 +98,19 @@ const Home = () => {
                         </div>
                     </div>
 
-                </div>
-            </div>
-            {/* <div className="container items-center justify-between mx-auto px-4 leading-normal">
-                <div className="block text-center pt-16 md:pt-20 lg:pt-48 mb-24">
-                    <p className="font-rubik font-medium text-center text-primary-color uppercase">About Me</p>
-                    <h2 className="font-black text-primary-grey uppercase pt-8 pb-8 text-3xl"></h2>
-                    <div className="flex flex-wrap">
-                        <p className="w-full md:w-2/3 mr-auto ml-auto text-grey-darker text-base"></p>
+                </section>
+                <section className="md:flex experience">
+                    <div className="md:flex w-full">
+                        <div className="md:flex-gold-prev">
+                            <h1>Experience</h1>
+                        </div>
+                        <div className="md:flex-gold-after">
+                                <Experience></Experience>
+                        </div>
                     </div>
-                    <div className="avatar pt-24"><img src="/img/avatar.156dd5d9.png" alt="Drive a successful digital transformation" /></div>
-                </div>
-            </div> */}
+                </section>
+            </div>
+           
         </React.Fragment>
     );
 };
