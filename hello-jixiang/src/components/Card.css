@@ -29,9 +29,16 @@
 .card-title {
     margin-bottom: .75rem;
 }
+
+.card .card-text {
+    padding: .75rem 1rem;
+}
+
 .text-muted {
     color: rgba(0,0,0,.54)!important;
 }
+
+/*exp*/
 .exp-title {
     text-transform: none!important;
 }
@@ -42,8 +49,12 @@
 .exp-meta {
     font-size: .8rem;
 }
+.exp .card-text {
+    color: #000!important;
+    font-size: .75rem!important;
+}
 
-
+/*project*/
 
 
 

@@ -3,7 +3,7 @@ import React from 'react';
 import avatarUrl from "assets/me.jpeg";
 
 //[proj]
-import ExperienceCard from "components/ExperienceCard"
+import { ExperienceCard, ProjectCard } from "components/Card"
 
 
 const razerExp = {
@@ -26,19 +26,66 @@ const dhiExp = {
 
 const myExps = [razerExp, dhiExp];
 
+const razerProject = {
+    name: "Razer Inc.",
+    link: "https://www.razer.com/",
+    vendor: "Singapore/June 2018 - Present",
+    vendorLink: "",
+    tasks: [
+        "Main developer for Microsoft Xbox Application for Console Peripheral devices (C++ / JavaScript)",
+        "Main developer for the Alexa module and cooperate with AWS Alexa team. (JavaScript / WebRTC)",
+        "Design and Implement ReactJS/Redux projects for Peripheral devices and experienced in Unit Test framework (JEST).",
+        "Experienced in code bug fix and code refactoring on windows DLL projects for Peripheral devices. (C++ / Windows SDK)",
+        "Experienced in firmware protocol analysis. (Wireshark/Bushound)",
+        "Refactoring Redux Store structure and integrate Typescript into on-going projects. (React/Redux/TypeScript)",
+        "Refactoring on-going projects by adding Xstate finite state machine to manage the device state. (TypeScript/Xstate)"
+    ]
+}
+
+const dhiProject = {
+    name: "DHI",
+    link: "https://www.dhigroup.com/",
+    vendor: "Singapore / August 2016 – June 2018",
+    vendorLink: "",
+    tasks:[
+        "As a full-stack programmer in two web projects by using Polymer 1&2, .NET4.5 API, PostgreSQL, Couch DB.",
+        "As a frontend programmer in one web project by using .NET MVC5, Vanilla JavaScript/jQuery.",
+        "As a team member lead by a senior in one web project by using .NET MVC CORE2.0, Entity Framework",
+        "As a software developer Produced many console applications tools by using C# for operational use."
+    ]
+}
+
+const myProjects = [razerProject, dhiProject];
+
 
 const Experience = () => {
     return (
         <>
             {
-                myExps.map((exp) => {
+                myExps.map((exp, index) => {
                     return (
-                        <div className="flex justify-center">
+                        <div key={index} className="flex justify-center">
                             <ExperienceCard {...exp}></ExperienceCard>
                         </div>
                     )
                 })
             }
+        </>
+    )
+}
+
+const Project = () => {
+    return (
+        <>
+        {
+            myProjects.map((proj,index)=> {
+                return (
+                    <div key={index} className="flex justify-center">
+                        <ProjectCard {...proj}></ProjectCard>
+                    </div>
+                )
+            })
+        }
         </>
     )
 }
@@ -79,15 +126,15 @@ const Home = () => {
                             </p>
                         </div>
                         <div className="md:flex p-4 justify-items-center items-center">
-                            <div className="md:flex-5 text-center p-4 m-4">
-                                <h1>Education</h1>
-                                <h3>M.S in Information Technology</h3>
-                                <li>2015 - 2016</li>
+                            <div className="md:flex-5 text-left p-4 m-4">
+                                <h1>Interest</h1>
+                                <li>Typescript/Javascript</li>
+                                <li>React/Redux</li>
+                                <li>Frontend/Fullstack Development</li>
+                                <li>Golang (learning) </li>
 
-                                <h3>B.S in Computer Science and Technology</h3>
-                                <li>2010 - 2014</li>
                             </div>
-                            <div className="md:flex-7 text-center">
+                            <div className="md:flex-7 text-left">
                                 <h1>Education</h1>
                                 <h3>M.S in Information Technology</h3>
                                 <li>2015 - 2016</li>
@@ -109,6 +156,18 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
+                <section className="md:flex project">
+                <div className="md:flex w-full">
+                        <div className="md:flex-gold-prev">
+                            <h1>Projects</h1>
+                        </div>
+                        <div className="md:flex-gold-after">
+                                <Project></Project>
+                        </div>
+                    </div>
+                </section>
+            
+                
             </div>
            
         </React.Fragment>
