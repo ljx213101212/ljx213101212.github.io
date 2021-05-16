@@ -11,6 +11,7 @@ export default defineConfig({
       "assets": resolve(__dirname, "src/assets"),
       "views": resolve(__dirname, "src/views"),
       "components": resolve(__dirname, "src/components"),
+      "constants": resolve(__dirname, "constants.js"),
     }
   }
 })

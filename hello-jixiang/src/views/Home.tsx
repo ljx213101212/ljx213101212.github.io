@@ -4,7 +4,8 @@ import avatarUrl from "assets/me.jpeg";
 
 //[proj]
 import { ExperienceCard, ProjectCard } from "components/Card"
-
+import { footerData } from 'constants';
+import Footer from "components/Footer"
 
 const razerExp = {
     title: "Software Engineer",
@@ -166,8 +167,9 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-            
-                
+
+                <Footer {...footerData}></Footer>
+               
             </div>
            
         </React.Fragment>

@@ -3,3 +3,11 @@
 @import 'tailwindcss/components';
 
 @import 'tailwindcss/utilities';
+
+
+a:hover {
+    color: #2962ff;
+    text-decoration: none;
+    transition: color .6s ease;
+    cursor: pointer;
+}
