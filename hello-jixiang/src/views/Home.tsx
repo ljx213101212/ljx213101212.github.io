@@ -115,37 +115,40 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:flex justify-center flex-col flex-gold-after">
+                    <div className="md:flex justify-center flex-col flex-gold-after h-full">
                         <div className="md:flex flex-col p-4 justify-items-center items-center">
-                            <h1>Biography</h1>
+                            <h1 className="text-xl">About Me</h1>
                             <p>Jixiang Li aims to be a fullstack developer with a good vision of design and implementation
                                 in software engineering. He is specialized in frontend software development and delivered software 
                                 applications through different platforms from Windows 10, Xbox and Web Browser. Working in an user && 
                                 developer expereince oriented way.
                             </p>
                         </div>
-                        <div className="md:flex p-4 justify-items-center items-center">
-                            <div className="md:flex-5 text-left p-4 m-4">
-                                <h1>Interest</h1>
-                                <li>Typescript/Javascript</li>
-                                <li>React/Redux</li>
-                                <li>Frontend/Fullstack Development</li>
-                                <li>Golang (learning) </li>
+                        <div className="md:flex p-4 justify-items-center items-center mt-8">
+                            <div className="md:flex-5 text-left m-4 md:pl-0 md:ml-0">
+                                <h1 className="text-xl pb-1">Interest</h1>
+                                <li className="pt-1">Typescript/Javascript</li>
+                                <li className="pt-1">React/Redux</li>
+                                <li className="pt-1">Frontend/Fullstack Development</li>
+                                <li className="pt-1">Golang (learning) </li>
 
                             </div>
                             <div className="md:flex-7 text-left">
-                                <h1>Education</h1>
+                                <h1 className="text-xl pb-1"> Education</h1>
+                                <div className="p-1">
                                 <h3>M.S in Information Technology</h3>
                                 <li>2015 - 2016</li>
-
+                                </div>
+                                <div className="p-1">
                                 <h3>B.S in Computer Science and Technology</h3>
                                 <li>2010 - 2014</li>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                 </section>
-                <section className="md:flex experience">
+                <section className="md:flex experience pt-20">
                     <div className="md:flex w-full">
                         <div className="md:flex-gold-prev">
                             <h1>Experience</h1>
