@@ -105,11 +105,11 @@ const Home = () => {
                                 <h3 className="p-4 pt-0">Software Engineer</h3>
                                 <ul className="flex">
                                     <li className="flex-1">
-                                        <a href="https://github.com/ljx213101212" target="_blank"><i className="fab fa-github big-icon transform  hover:scale-150 text-5xl transition-colors duration-150 transition-transform duration-500 ease-in-out"></i></a>
+                                        <a href="https://github.com/ljx213101212" target="_blank"><i className="fab fa-github big-icon transform  hover:scale-125 text-5xl transition-colors duration-150 transition-transform duration-300 ease-in-out"></i></a>
                                     </li>
 
                                     <li className="flex-1">
-                                        <a href="https://www.linkedin.com/in/jixiang-li-89b4a5b6/" target="_blank"><i className="fab fa-linkedin big-icon transform  hover:scale-150 text-5xl transition-colors duration-150 transition-transform duration-500 ease-in-out"></i></a>
+                                        <a href="https://www.linkedin.com/in/jixiang-li-89b4a5b6/" target="_blank"><i className="fab fa-linkedin big-icon transform  hover:scale-125 text-5xl transition-colors duration-150 transition-transform duration-300 ease-in-out"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -137,11 +137,19 @@ const Home = () => {
                                 <h1 className="text-xl pb-1"> Education</h1>
                                 <div className="p-1">
                                 <h3>M.S in Information Technology</h3>
-                                <li>2015 - 2016</li>
+                                <li>2015 - 2016 
+                                        <span className="text-gray-400 text-xs">
+                                            <a href="https://nus.edu.sg/" target="_blank">(National University of Singapore)</a>
+                                        </span>
+                                    </li>
                                 </div>
                                 <div className="p-1">
                                 <h3>B.S in Computer Science and Technology</h3>
-                                <li>2010 - 2014</li>
+                                    <li>2010 - 2014
+                                        <span className="text-gray-400 text-xs">
+                                            <a href="https://www.seu.edu.cn/english/" target="_blank">(Southeast University)</a>
+                                        </span>
+                                    </li>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: {
@@ -27,6 +28,9 @@ module.exports = {
       'gold-after': '1 1 66.6666%',
       '5': '1 1 41.6667%;',
       '7': '1 1 58.3333%'
+    },
+    colors: {
+      'gray': colors.trueGray
     }
   },
   variants: {},
