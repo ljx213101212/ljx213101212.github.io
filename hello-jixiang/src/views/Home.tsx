@@ -96,22 +96,20 @@ const Home = () => {
         <React.Fragment>
             {/* <Header title="Biography" /> */}
             <div className="container items-center mx-auto px-4 leading-normal">
-                <section className="md:flex aboutme">
+                <section className="md:flex aboutme pt-20">
                     <div className="md:flex justify-center flex-gold-prev">
                         <div className="md:flex flex-col p-4 justify-items-center items-center">
-                            <img className="md:w-24 rounded-full m-auto w-40" src={avatarUrl} alt="Avatar" />
+                            <img className="md:w-3/5 rounded-full m-auto w-1/2" src={avatarUrl} alt="Avatar" />
                             <div className="text-center">
-                                <h2>Jixiang Li</h2>
-                                <h3>Software Engineer</h3>
-                                <ul>
-                                    <li>
-                                        <a href="https://github.com/ljx213101212">github icon</a>
-                                        <i className="fab fa-github big-icon"></i>
+                                <h2 className="text-2xl p-4 pb-1">Jixiang Li</h2>
+                                <h3 className="p-4 pt-0">Software Engineer</h3>
+                                <ul className="flex">
+                                    <li className="flex-1">
+                                        <a href="https://github.com/ljx213101212" target="_blank"><i className="fab fa-github big-icon transform  hover:scale-150 text-5xl transition-colors duration-150 transition-transform duration-500 ease-in-out"></i></a>
                                     </li>
 
-                                    <li>
-                                        <a href="https://www.linkedin.com/in/jixiang-li-89b4a5b6/">linkedin icon</a>
-                                        <i className="fab fa-linkedin big-icon"></i>
+                                    <li className="flex-1">
+                                        <a href="https://www.linkedin.com/in/jixiang-li-89b4a5b6/" target="_blank"><i className="fab fa-linkedin big-icon transform  hover:scale-150 text-5xl transition-colors duration-150 transition-transform duration-500 ease-in-out"></i></a>
                                     </li>
                                 </ul>
                             </div>

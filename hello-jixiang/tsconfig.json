@@ -1,7 +1,8 @@
 {
     "include": [
-        "./src/*"
-, "constants.js"    ],
+        "./src/*",
+        "src/constants.js"
+    ],
     "exclude": ["node_modules", "**/__tests__/*"],
     "compilerOptions": {
         "noFallthroughCasesInSwitch": true,
