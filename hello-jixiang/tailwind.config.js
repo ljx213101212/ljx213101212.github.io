@@ -5,6 +5,7 @@ module.exports = {
   content: ['./src/**/*.{html,js,tsx,jsx}'],
   corePlugins: {
     gap: true,
+    p: true,
   },
   purge: {
     enabled: process.env.NODE_ENV === 'production',

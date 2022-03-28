@@ -16,8 +16,8 @@ const Home = () => {
   return (
     <React.Fragment>
       {/* <Header title="Biography" /> */}
-      <div className="container items-center mx-auto px-4 leading-normal">
-        <section className="md:flex aboutme pt-20">
+      <div className="md:container md:mx-auto items-center px-4 leading-normal">
+        <section className="md:flex aboutme pt-12">
           <div className="md:flex justify-center flex-gold-prev">
             <div className="md:flex flex-col p-4 justify-items-center items-center">
               <img className="md:w-3/5 rounded-full m-auto w-1/2" src={avatarUrl} alt="Avatar" />
@@ -86,13 +86,13 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col pt-20 experience">
+        <section className="flex flex-col pt-20 md:px-12  experience">
           <div className="mt-2">Experience</div>
           <div className="flex flex-col w-full mt-2">
             <Experiences experiences={myExps}></Experiences>
           </div>
         </section>
-        <section className="flex flex-col pt-20 project">
+        <section className="flex flex-col pt-20 md:px-12 project">
           <div className="mt-2">Projects</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gird-rows-1 md: grid-rows-2 gap-4 md:gap-6 w-full mt-2">
             <Projects projects={myProjs}></Projects>
