@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-interface ExperienceProps extends Experience {
+interface ExperienceCardProps extends Experience {
   tasks?: string[];
 }
 
@@ -13,7 +13,7 @@ export const ExperienceCard = ({
   endTime,
   location,
   tasks,
-}: ExperienceProps) => {
+}: ExperienceCardProps) => {
   return (
     <div className="card w-full">
       <div className="card-body">

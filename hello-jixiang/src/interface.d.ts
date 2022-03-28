@@ -15,3 +15,8 @@ interface Project {
   vendorLink?: string;
   tasks?: string[];
 }
+
+interface Company {
+  name: string;
+  link?: string;
+}

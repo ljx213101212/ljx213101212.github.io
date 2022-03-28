@@ -6,7 +6,9 @@ import avatarUrl from 'assets/me.jpeg';
 import { footerData } from 'constants';
 import Footer from 'components/Footer';
 import Experience from 'components/Experience';
-import { ProjectCard } from 'components/Card';
+import { epamExp, razerExp, dhiExp } from 'constants';
+
+const myExps = [epamExp, razerExp, dhiExp];
 
 const Home = () => {
   return (
@@ -85,7 +87,7 @@ const Home = () => {
         <section className="flex flex-col experience pt-20">
           <div className="mt-2">Experience</div>
           <div className="flex flex-col w-full mt-2">
-            <Experience></Experience>
+            <Experience experiences={myExps}></Experience>
           </div>
         </section>
         <section className="md:flex project">
