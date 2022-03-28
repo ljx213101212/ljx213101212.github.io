@@ -1,8 +1,8 @@
 {
     "include": [
-        "./src/*",
-        "src/constants.js"
-    ],
+        "src/*",
+        "src/constants.ts"
+, "src/interface.d.ts"    ],
     "exclude": ["node_modules", "**/__tests__/*"],
     "compilerOptions": {
         "noFallthroughCasesInSwitch": true,
@@ -24,6 +24,6 @@
         "noEmit": true,
         "jsx": "react",
         "target": "es5",
-        "baseUrl": "./src"
+        "baseUrl": "src"
     }
 }

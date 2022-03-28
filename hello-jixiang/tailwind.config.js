@@ -1,17 +1,12 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
+  content: ['./src/**/*.{html,js,tsx,jsx}'],
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     safeList: [],
-    content: [
-      './index.html',
-      './src/**/*.jsx',
-      './src/**/*.js',
-      './src/**/*.tsx',
-      './src/**/*.ts',
-    ],
+    content: ['./index.html', './src/**/*.jsx', './src/**/*.js', './src/**/*.tsx', './src/**/*.ts'],
   },
   theme: {
     extend: {
@@ -21,18 +16,20 @@ module.exports = {
       },
     },
     flex: {
-      '1' : '1 1 0%',
-      'auto' : '1 1 auto',
-      'none': 'none',
+      1: '1 1 0%',
+      auto: '1 1 auto',
+      none: 'none',
       'gold-prev': '1 1 33.3333%',
       'gold-after': '1 1 66.6666%',
-      '5': '1 1 41.6667%;',
-      '7': '1 1 58.3333%'
+      5: '1 1 41.6667%;',
+      7: '1 1 58.3333%',
     },
     colors: {
-      'gray': colors.trueGray
-    }
+      gray: colors.trueGray,
+      slate: colors.slate,
+    },
+    
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };
