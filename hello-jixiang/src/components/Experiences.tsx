@@ -1,17 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
 import { ExperienceCard } from 'components/libs/Card';
 
 interface ExperienceProps {
   experiences: Experience[];
 }
 
-const Experience = ({ experiences }: ExperienceProps) => {
+const Experiences = ({ experiences }: ExperienceProps) => {
   return (
     <>
       {experiences.map((exp, index) => {
         return (
-          <div key={index} className="flex justify-center w-full">
+          <div key={index} className="flex justify-center w-full mb-6">
             <ExperienceCard {...exp}></ExperienceCard>
           </div>
         );
@@ -20,4 +19,4 @@ const Experience = ({ experiences }: ExperienceProps) => {
   );
 };
 
-export default Experience;
+export default Experiences;

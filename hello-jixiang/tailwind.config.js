@@ -3,6 +3,9 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: ['./src/**/*.{html,js,tsx,jsx}'],
+  corePlugins: {
+    gap: true,
+  },
   purge: {
     enabled: process.env.NODE_ENV === 'production',
     safeList: [],
@@ -28,7 +31,6 @@ module.exports = {
       gray: colors.trueGray,
       slate: colors.slate,
     },
-    
   },
   variants: {},
   plugins: [],

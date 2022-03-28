@@ -10,13 +10,16 @@ interface Experience {
 interface Project {
   name: string;
   company: string;
+  isMajor?: boolean;
+  startTime?: string;
+  endTime?: string;
   link?: string;
-  vendor?: string;
-  vendorLink?: string;
   tasks?: string[];
+  description?: string;
 }
 
 interface Company {
   name: string;
-  link?: string;
+  link: string;
+  tasks: string[];
 }

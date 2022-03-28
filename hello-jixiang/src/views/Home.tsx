@@ -5,10 +5,12 @@ import avatarUrl from 'assets/me.jpeg';
 //[proj]
 import { footerData } from 'constants';
 import Footer from 'components/Footer';
-import Experience from 'components/Experience';
-import { epamExp, razerExp, dhiExp } from 'constants';
+import Experiences from 'components/Experiences';
+import Projects from 'components/Projects';
+import { epamExp, razerExp, dhiExp, personalProjects, epamProjects, razerProjects } from 'constants';
 
 const myExps = [epamExp, razerExp, dhiExp];
+const myProjs = [...personalProjects, ...epamProjects, ...razerProjects];
 
 const Home = () => {
   return (
@@ -84,18 +86,16 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col experience pt-20">
+        <section className="flex flex-col pt-20 experience">
           <div className="mt-2">Experience</div>
           <div className="flex flex-col w-full mt-2">
-            <Experience experiences={myExps}></Experience>
+            <Experiences experiences={myExps}></Experiences>
           </div>
         </section>
-        <section className="md:flex project">
-          <div className="md:flex w-full">
-            <div className="md:flex-gold-prev">
-              <h1>Projects</h1>
-            </div>
-            <div className="md:flex-gold-after">...</div>
+        <section className="flex flex-col pt-20 project">
+          <div className="mt-2">Projects</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gird-rows-1 md: grid-rows-2 gap-4 md:gap-6 w-full mt-2">
+            <Projects projects={myProjs}></Projects>
           </div>
         </section>
 

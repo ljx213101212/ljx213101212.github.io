@@ -11,63 +11,86 @@ export const footerData = {
   },
 };
 
+export const LABELS = {
+  ON_GOING: 'On Going',
+};
+
 const EPAM = {
   name: 'EPAM Systems',
   link: 'https://www.epam.com/',
+  tasks: [
+    'Main developer for Microsoft Xbox Application for Console Peripheral devices (C++ / JavaScript)',
+    'Main developer for the Alexa module and cooperate with AWS Alexa team. (JavaScript / WebRTC)',
+    'Design and Implement ReactJS/Redux projects for Peripheral devices and experienced in Unit Test framework (JEST).',
+    'Experienced in code bug fix and code refactoring on windows DLL projects for Peripheral devices. (C++ / Windows SDK)',
+    'Experienced in firmware protocol analysis. (Wireshark/Bushound)',
+    'Refactoring Redux Store structure and integrate Typescript into on-going projects. (React/Redux/TypeScript)',
+    'Refactoring on-going projects by adding Xstate finite state machine to manage the device state. (TypeScript/Xstate)',
+  ],
 } as Company;
 const RAZER = {
   name: 'Razer',
   link: 'https://www.razer.com/',
+  tasks: [
+    'Main developer for Microsoft Xbox Application for Console Peripheral devices (C++ / JavaScript)',
+    'Main developer for the Alexa module and cooperate with AWS Alexa team. (JavaScript / WebRTC)',
+    'Design and Implement ReactJS/Redux projects for Peripheral devices and experienced in Unit Test framework (JEST).',
+    'Experienced in code bug fix and code refactoring on windows DLL projects for Peripheral devices. (C++ / Windows SDK)',
+    'Experienced in firmware protocol analysis. (Wireshark/Bushound)',
+    'Refactoring Redux Store structure and integrate Typescript into on-going projects. (React/Redux/TypeScript)',
+    'Refactoring on-going projects by adding Xstate finite state machine to manage the device state. (TypeScript/Xstate)',
+  ],
 } as Company;
 const DHI = {
   name: 'DHI',
   link: 'https://www.dhigroup.com/',
-} as Company;
-
-export const epamProject = {
-  company: EPAM.name,
-  link: EPAM.link,
-  vendor: 'Singapore/August 2021 - Present',
-  vendorLink: '',
-  tasks: [
-    'Main developer for Microsoft Xbox Application for Console Peripheral devices (C++ / JavaScript)',
-    'Main developer for the Alexa module and cooperate with AWS Alexa team. (JavaScript / WebRTC)',
-    'Design and Implement ReactJS/Redux projects for Peripheral devices and experienced in Unit Test framework (JEST).',
-    'Experienced in code bug fix and code refactoring on windows DLL projects for Peripheral devices. (C++ / Windows SDK)',
-    'Experienced in firmware protocol analysis. (Wireshark/Bushound)',
-    'Refactoring Redux Store structure and integrate Typescript into on-going projects. (React/Redux/TypeScript)',
-    'Refactoring on-going projects by adding Xstate finite state machine to manage the device state. (TypeScript/Xstate)',
-  ],
-} as Project;
-
-export const razerProject = {
-  company: RAZER.name,
-  link: RAZER.link,
-  vendor: 'Singapore/June 2018 - Singapore/August 2021',
-  vendorLink: '',
-  tasks: [
-    'Main developer for Microsoft Xbox Application for Console Peripheral devices (C++ / JavaScript)',
-    'Main developer for the Alexa module and cooperate with AWS Alexa team. (JavaScript / WebRTC)',
-    'Design and Implement ReactJS/Redux projects for Peripheral devices and experienced in Unit Test framework (JEST).',
-    'Experienced in code bug fix and code refactoring on windows DLL projects for Peripheral devices. (C++ / Windows SDK)',
-    'Experienced in firmware protocol analysis. (Wireshark/Bushound)',
-    'Refactoring Redux Store structure and integrate Typescript into on-going projects. (React/Redux/TypeScript)',
-    'Refactoring on-going projects by adding Xstate finite state machine to manage the device state. (TypeScript/Xstate)',
-  ],
-} as Project;
-
-export const dhiProject = {
-  company: DHI.name,
-  link: DHI.link,
-  vendor: 'Singapore / August 2016 – June 2018',
-  vendorLink: '',
   tasks: [
     'As a full-stack programmer in two web projects by using Polymer 1&2, .NET4.5 API, PostgreSQL, Couch DB.',
     'As a frontend programmer in one web project by using .NET MVC5, Vanilla JavaScript/jQuery.',
     'As a team member lead by a senior in one web project by using .NET MVC CORE2.0, Entity Framework',
     'As a software developer Produced many console applications tools by using C# for operational use.',
   ],
+} as Company;
+
+const PROJ_LEECODE_ILLUSTRATION = {
+  name: 'Leetcode Illustration',
+  startTime: '2021-12-05',
+  company: 'Personal',
+  link: 'https://github.com/ljx213101212/leetcode-illustrations',
+  isMajor: true,
 } as Project;
+
+const PROJ_CRM_WEB = {
+  name: 'CRM WEB (NDA)',
+  startTime: '2021-09-01',
+  company: EPAM.name,
+};
+const PROJ_CHROMA_STUDIO = {
+  name: 'Chroma Studio',
+  startTime: '2020-04',
+  endTime: '2020-12',
+  company: RAZER.name,
+  link: 'https://www.razer.com/chroma',
+};
+const PROJ_SYNAPSE_ALEXA = {
+  name: 'Synapse Alexa',
+  startTime: '2019-03',
+  endTime: '2019-10',
+  company: RAZER.name,
+  link: 'https://www.razer.com/chroma/alexa',
+};
+const PROJ_SYNAPSE_3 = {
+  name: 'Synapse 3',
+  startTime: '2018-06',
+  endTime: '2019-02',
+  company: RAZER.name,
+  link: 'https://www.razer.com/synapse-3',
+};
+
+export const personalProjects = [PROJ_LEECODE_ILLUSTRATION] as Project[];
+export const epamProjects = [PROJ_CRM_WEB] as Project[];
+export const razerProjects = [PROJ_CHROMA_STUDIO, PROJ_SYNAPSE_ALEXA, PROJ_SYNAPSE_3] as Project[];
+export const dhiProject = [] as Project[];
 
 export const epamExp = {
   title: 'Software Engineer',
@@ -76,12 +99,7 @@ export const epamExp = {
   startTime: 'September 2021',
   endTime: 'Present',
   location: 'Singapore',
-  tasks: [
-    'Work seamlessly with UX developer to develop Web UI (React/Redux/TypeScript)',
-    'Design Robust Unit test cases with QA developers(RTL/Jest)',
-    'Mentoring Junior Developer with the concept of software design and basic tooling.',
-    'Helped the product owner to expand the business from 1 to 3 regions/markets.',
-  ],
+  tasks: EPAM.tasks,
 } as Experience;
 
 export const razerExp = {
@@ -91,7 +109,7 @@ export const razerExp = {
   startTime: 'June 2018',
   endTime: 'August 2021',
   location: 'Singapore',
-  tasks: razerProject.tasks,
+  tasks: RAZER.tasks,
 } as Experience;
 
 export const dhiExp = {
@@ -101,5 +119,5 @@ export const dhiExp = {
   startTime: 'Aug 2016',
   endTime: 'May 2018',
   location: 'Singapore',
-  tasks: dhiProject.tasks,
+  tasks: DHI.tasks,
 } as Experience;

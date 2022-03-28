@@ -1,9 +1,13 @@
 {
     "include": [
         "src/*",
-        "src/constants.ts"
-, "src/interface.d.ts"    ],
-    "exclude": ["node_modules", "**/__tests__/*"],
+        "src/constants.ts",
+        "src/global.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/__tests__/*"
+    ],
     "compilerOptions": {
         "noFallthroughCasesInSwitch": true,
         "lib": [

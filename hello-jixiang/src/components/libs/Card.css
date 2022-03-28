@@ -1,60 +1,59 @@
 .card {
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    background: #fff;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
-    transition: all .2s ease-out;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  transition: all 0.2s ease-out;
 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 .card h4 {
-    font-size: .9rem;
-    font-weight: 700;
-    line-height: 1.5;
-    text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
+
 .card-body {
-    flex: 1 1 auto;
-    padding: 1.25rem;
+  flex: 1 1 auto;
+}
+.card-content {
+  padding: 1.25rem;
 }
 .card-title {
-    margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
 }
 
 .card .card-text {
-    padding: .75rem 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .text-muted {
-    color: rgba(0,0,0,.54)!important;
+  color: rgba(0, 0, 0, 0.54) !important;
 }
 
 /*exp*/
 .exp-title {
-    text-transform: none!important;
+  text-transform: none !important;
 }
 .exp-company {
-    font-weight: 400!important;
-    text-transform: none!important;
+  font-weight: 400 !important;
+  text-transform: none !important;
 }
 .exp-meta {
-    font-size: .8rem;
+  font-size: 0.8rem;
 }
 .exp .card-text {
-    color: #000!important;
-    font-size: .75rem!important;
+  color: #000 !important;
+  font-size: 0.75rem !important;
 }
 
 /*project*/
-
-
-
