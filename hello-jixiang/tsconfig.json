@@ -2,7 +2,8 @@
     "include": [
         "src/*",
         "src/constants.ts",
-        "src/global.d.ts"
+        "src/global.d.ts",
+        "global.d.ts"
     ],
     "exclude": [
         "node_modules",
@@ -29,5 +30,8 @@
         "jsx": "react",
         "target": "es5",
         "baseUrl": "src"
-    }
+    },
+    "files": [
+        "src/global.d.ts"
+    ]
 }

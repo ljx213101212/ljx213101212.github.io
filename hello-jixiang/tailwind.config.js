@@ -29,7 +29,7 @@ module.exports = {
       7: '1 1 58.3333%',
     },
     colors: {
-      gray: colors.trueGray,
+      gray: colors.neutral,
       slate: colors.slate,
     },
   },

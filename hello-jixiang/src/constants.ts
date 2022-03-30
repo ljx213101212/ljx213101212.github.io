@@ -11,10 +11,16 @@ export const footerData = {
   },
 };
 
+export const quotes = [
+  {
+    quote: 'The essential thing is not to have conquered but to have fought well.',
+    author: 'Pierre de Coubertin',
+  },
+] as Quote[];
+
 export const LABELS = {
   ON_GOING: 'On Going',
 };
-
 const EPAM = {
   name: 'EPAM Systems',
   link: 'https://www.epam.com/',

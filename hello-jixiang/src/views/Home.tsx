@@ -7,7 +7,8 @@ import { footerData } from 'constants';
 import Footer from 'components/Footer';
 import Experiences from 'components/Experiences';
 import Projects from 'components/Projects';
-import { epamExp, razerExp, dhiExp, personalProjects, epamProjects, razerProjects } from 'constants';
+import Quotes from 'components/Quotes';
+import { epamExp, razerExp, dhiExp, personalProjects, epamProjects, razerProjects, quotes } from 'constants';
 
 const myExps = [epamExp, razerExp, dhiExp];
 const myProjs = [...personalProjects, ...epamProjects, ...razerProjects];
@@ -96,6 +97,12 @@ const Home = () => {
           <div className="mt-2">Projects</div>
           <div className="grid grid-cols-1 md:grid-cols-3 gird-rows-1 md: grid-rows-2 gap-4 md:gap-6 w-full mt-2">
             <Projects projects={myProjs}></Projects>
+          </div>
+        </section>
+
+        <section className="">
+          <div className="">
+            <Quotes quotes={quotes} delayInMilisecond={6500}></Quotes>
           </div>
         </section>
 

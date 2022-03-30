@@ -18,6 +18,11 @@ interface Project {
   description?: string;
 }
 
+interface Quote {
+  quote: string;
+  author: string;
+}
+
 interface Company {
   name: string;
   link: string;

@@ -12,6 +12,7 @@ export default defineConfig({
       views: resolve(__dirname, 'src/views'),
       components: resolve(__dirname, 'src/components'),
       constants: resolve(__dirname, 'src/constants'),
+      global: resolve(__dirname, 'src/global'),
     },
   },
 });
