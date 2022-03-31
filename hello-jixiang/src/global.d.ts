@@ -1,3 +1,13 @@
+interface NavLink {
+  text: string;
+  to: string;
+}
+
+interface MediaLink {
+  fontAwesomeClassName: string;
+  link: string;
+}
+
 interface Experience {
   title: string;
   company: string;

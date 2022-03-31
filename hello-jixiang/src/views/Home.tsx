@@ -1,14 +1,13 @@
 import React from 'react';
-//@ts-ignore
-import avatarUrl from 'assets/me.jpeg';
-
-//[proj]
 import { footerData } from 'constants';
-import Footer from 'components/Footer';
+
+import AboutMe from 'components/AboutMe';
 import Experiences from 'components/Experiences';
 import Projects from 'components/Projects';
 import Quotes from 'components/Quotes';
+import Footer from 'components/Footer';
 import { epamExp, razerExp, dhiExp, personalProjects, epamProjects, razerProjects, quotes } from 'constants';
+import Header from 'components/Header';
 
 const myExps = [epamExp, razerExp, dhiExp];
 const myProjs = [...personalProjects, ...epamProjects, ...razerProjects];
@@ -16,10 +15,10 @@ const myProjs = [...personalProjects, ...epamProjects, ...razerProjects];
 const Home = () => {
   return (
     <React.Fragment>
-      {/* <Header title="Biography" /> */}
       <div className="md:container md:mx-auto items-center px-4 leading-normal">
-        <section className="md:flex aboutme pt-12">
-          <div className="md:flex justify-center flex-gold-prev">
+        <section className="md:flex aboutme pt-12 md:px-12">
+          <AboutMe />
+          {/* <div className="md:flex justify-center flex-gold-prev">
             <div className="md:flex flex-col p-4 justify-items-center items-center">
               <img className="md:w-3/5 rounded-full m-auto w-1/2" src={avatarUrl} alt="Avatar" />
               <div className="text-center">
@@ -85,7 +84,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </section>
         <section className="flex flex-col pt-20 md:px-12  experience">
           <div className="mt-2">Experience</div>

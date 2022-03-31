@@ -1,3 +1,27 @@
+//Header
+export const headerData = {
+  links: [
+    {
+      text: 'Blogs',
+      to: '/blogs',
+    },
+    {
+      text: 'About Me',
+      to: '/about',
+    },
+  ] as NavLink[],
+  medias: [
+    {
+      fontAwesomeClassName: 'fa-linkedin',
+      link: 'https://github.com/ljx213101212',
+    },
+    {
+      fontAwesomeClassName: 'fa-github',
+      link: 'https://www.linkedin.com/in/jixiang-li-89b4a5b6/',
+    },
+  ] as MediaLink[],
+};
+
 //Footer
 export const footerData = {
   title: '© 2021 · Powered By the',
