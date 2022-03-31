@@ -1,3 +1,7 @@
+export const EVENTS = {
+  ROUTER_LOCATION_CHANGED: 'router-location-changed',
+};
+
 //Header
 export const headerData = {
   links: [

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { getCurrentYear } from 'utils/math';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 
-const Footer = () => {
+interface FooterProps {
+  isStickyBottom: boolean;
+}
+
+const Footer = ({ isStickyBottom }: FooterProps) => {
   return (
-    <div className="bg-white shadow py-4 text-center">
+    <div className={`bg-white shadow py-4 text-center w-full ${isStickyBottom ? 'fixed bottom-0' : ''}`}>
       <footer>
         <p className="powered-by">
           © {getCurrentYear()} · Powered By the
