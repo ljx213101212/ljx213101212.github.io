@@ -13,6 +13,7 @@ export default defineConfig({
       components: resolve(__dirname, 'src/components'),
       constants: resolve(__dirname, 'src/constants'),
       global: resolve(__dirname, 'src/global'),
+      utils: resolve(__dirname, 'src/utils'),
     },
   },
 });

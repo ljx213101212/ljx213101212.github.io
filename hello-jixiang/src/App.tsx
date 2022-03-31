@@ -9,6 +9,7 @@ import Blogs from 'views/Blogs';
 import NotFound from './views/NotFound';
 import Header from 'components/Header';
 import { headerData } from 'constants';
+import Footer from 'components/Footer';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <NotFound />
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 };

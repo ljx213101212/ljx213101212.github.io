@@ -104,8 +104,6 @@ const Home = () => {
             <Quotes quotes={quotes} delayInMilisecond={6500}></Quotes>
           </div>
         </section>
-
-        <Footer {...footerData}></Footer>
       </div>
     </React.Fragment>
   );
