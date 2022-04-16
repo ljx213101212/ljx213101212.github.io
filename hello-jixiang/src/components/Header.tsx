@@ -25,6 +25,13 @@ const Header = ({ links, medias }: HeaderProps) => {
     e.preventDefault();
     e.stopPropagation();
   };
+  const onClickSliderMenu = (e: Event) => {
+    const isClickable = e.path.find((element: any) => element.classList?.contains('clickable'));
+    if (!isClickable) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  };
 
   const onClickOutsideMenu = () => {
     onMenuClose();
@@ -35,12 +42,12 @@ const Header = ({ links, medias }: HeaderProps) => {
     document.addEventListener('click', onClickDocument);
     sliderMenu.addEventListener('wheel', onInteractSliderMenu);
     sliderMenu.addEventListener('touchmove', onInteractSliderMenu);
-    //sliderMenu.addEventListener('click', onInteractSliderMenu);
+    sliderMenu.addEventListener('click', onClickSliderMenu);
     return () => {
       document.removeEventListener('click', onClickDocument);
       sliderMenu.removeEventListener('wheel', onInteractSliderMenu);
       sliderMenu.removeEventListener('touchmove', onInteractSliderMenu);
-      //sliderMenu.removeEventListener('click', onInteractSliderMenu);
+      sliderMenu.removeEventListener('click', onClickSliderMenu);
     };
   });
 
@@ -110,17 +117,19 @@ const Header = ({ links, medias }: HeaderProps) => {
         </MenuIcon>
       </header>
       <SlideMenu id="menuSlide" isShow={isMenuOpen} className="slide-menu">
-        <div style={{ padding: '2rem', borderBottom: '1px solid gray' }}>
-          <div className="logo">
-            <Link to={'./'}>
-              <svg height="48" width="48">
-                <circle cx="24" cy="24" r="18" stroke="black" stroke-width="2" fill="transparent" />
-              </svg>
-            </Link>
+        <Clickable className="clickable">
+          <div style={{ padding: '2rem', borderBottom: '1px solid gray' }}>
+            <div className="logo">
+              <Link to={'./'}>
+                <svg height="48" width="48">
+                  <circle cx="24" cy="24" r="18" stroke="black" stroke-width="2" fill="transparent" />
+                </svg>
+              </Link>
+            </div>
           </div>
-        </div>
+        </Clickable>
 
-        <SlideMenuItemContainer>
+        <Clickable className="clickable">
           {links.map((link) => {
             return (
               <SlideMenuItem>
@@ -130,18 +139,20 @@ const Header = ({ links, medias }: HeaderProps) => {
               </SlideMenuItem>
             );
           })}
-        </SlideMenuItemContainer>
+        </Clickable>
 
         <SlideMenuMediaItemContainer>
           {medias.map((media) => {
             return (
-              <span className="github-icon px-4">
-                <a href={media.link} target="_blank">
-                  <i
-                    className={`${media.fontAwesomeClassName} fab big-icon transform  hover:scale-125 text-4xl transition-colors duration-150 transition-transform duration-300 ease-in-out`}
-                  ></i>
-                </a>
-              </span>
+              <Clickable className="clickable">
+                <span className="github-icon px-4">
+                  <a href={media.link} target="_blank">
+                    <i
+                      className={`${media.fontAwesomeClassName} fab big-icon transform  hover:scale-125 text-4xl transition-colors duration-150 transition-transform duration-300 ease-in-out`}
+                    ></i>
+                  </a>
+                </span>
+              </Clickable>
             );
           })}
         </SlideMenuMediaItemContainer>
@@ -181,9 +192,18 @@ const SlideMenu = styled.div<SlideMenuProps>`
 const SlideMenuItemContainer = styled.div``;
 
 const SlideMenuItem = styled.div`
-  padding: 1.5rem;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 4rem;
   &:hover {
     background-color: #ccc;
+  }
+  a {
+    padding: 1.5rem;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
@@ -191,4 +211,12 @@ const SlideMenuMediaItemContainer = styled.div`
   padding: 1.5rem;
   display: flex;
   justify-content: flex-end;
+  margin-top: auto;
+  margin-left: auto;
+`;
+
+const Clickable = styled.div`
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
 `;
