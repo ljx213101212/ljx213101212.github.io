@@ -14,6 +14,7 @@ export default defineConfig({
       constants: resolve(__dirname, 'src/constants'),
       global: resolve(__dirname, 'src/global'),
       utils: resolve(__dirname, 'src/utils'),
+      Provider: resolve(__dirname, 'src/Provider'),
     },
   },
 });
