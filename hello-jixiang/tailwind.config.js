@@ -33,28 +33,5 @@ module.exports = {
       slate: colors.slate,
     },
   },
-  safelist: [
-    {
-      pattern: /.*/,
-      variants: [
-        'first',
-        'last',
-        'odd',
-        'even',
-        'visited',
-        'checked',
-        'empty',
-        'read-only',
-        'group-hover',
-        'group-focus',
-        'focus-within',
-        'hover',
-        'focus',
-        'focus-visible',
-        'active',
-        'disabled',
-      ],
-    },
-  ],
   plugins: [],
 };
