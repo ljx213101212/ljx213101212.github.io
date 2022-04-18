@@ -14,11 +14,11 @@ const FirstImpression = () => {
         <div>Hi, I am Jixiang</div>
       </div>
 
-      <SquareDecorationWrapper top={'0px'} right={'0px'}>
+      <SquareDecorationWrapper className="hidden md:block" top={'0px'} right={'0px'}>
         <SquareDecorator row={5} col={5} colorStart={'89abe3'} colorEnd={'ffffff'}></SquareDecorator>
       </SquareDecorationWrapper>
 
-      <SquareDecorationWrapper bottom={'0px'} left={'0px'}>
+      <SquareDecorationWrapper className="hidden md:block" bottom={'0px'} left={'0px'}>
         <SquareDecorator row={5} col={5} colorStart={'ffffff'} colorEnd={'89abe3'}></SquareDecorator>
       </SquareDecorationWrapper>
     </FirstImpressionContainer>

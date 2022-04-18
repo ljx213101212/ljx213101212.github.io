@@ -26,7 +26,7 @@ const Header = ({ links, medias }: HeaderProps) => {
     e.stopPropagation();
   };
   const onClickSliderMenu = (e: Event) => {
-    const isClickable = e.path.find((element: any) => element.classList?.contains('clickable'));
+    const isClickable = e.composedPath().find((element: any) => element.classList?.contains('clickable'));
     if (!isClickable) {
       e.preventDefault();
       e.stopPropagation();
