@@ -72,7 +72,7 @@ const Header = ({ links, medias }: HeaderProps) => {
   };
 
   return (
-    <>
+    <HeaderContainer>
       <header className="bg-white shadow py-4 hidden md:block">
         <div className="flex items-center md:container md:mx-auto">
           <div className="logo">
@@ -157,12 +157,13 @@ const Header = ({ links, medias }: HeaderProps) => {
           })}
         </SlideMenuMediaItemContainer>
       </SlideMenu>
-    </>
+    </HeaderContainer>
   );
 };
 
 export default Header;
 
+const HeaderContainer = styled.div``;
 interface MenuIconProps {
   color: string;
 }

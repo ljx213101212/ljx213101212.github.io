@@ -21,14 +21,17 @@ const initialAppOverlayContext = {
 
 interface AppThemetInterface {
   name: string;
+  headerHeight: number;
+  setHeaderHeight: (height: number) => any;
 }
 
 const initialAppThemeContext = {
   name: 'light',
+  headerHeight: 0,
+  setHeaderHeight: () => {},
 } as AppThemetInterface;
 
 export const AppThemeContext = React.createContext(initialAppThemeContext);
-
 export const AppOverlayContext = React.createContext<AppOverlayInterface>(initialAppOverlayContext);
 
 interface AppProviderProps {
@@ -39,13 +42,14 @@ const AppProvider = ({ children }: AppProviderProps) => {
   const [opacityValue, setOpacityValue] = useState(initialAppOverlayContext.opacity);
   const [opacityColor, setOpacityColor] = useState(initialAppOverlayContext.color);
 
+  const [headerHeight, setHeaderHeight] = useState(initialAppThemeContext.headerHeight);
+
   const appOverlayContextValue = useMemo(
     () => ({
       status: opacityStatus,
       opacity: opacityValue,
       color: opacityColor,
       setStatus: (opacityStatus: boolean) => {
-        console.log('setOpacityStatus', opacityStatus);
         setOpacityStatus(opacityStatus);
       },
       setOpacity: (opacityValue: number) => setOpacityValue(opacityValue),
@@ -54,9 +58,17 @@ const AppProvider = ({ children }: AppProviderProps) => {
     [opacityStatus, opacityValue, opacityColor],
   );
 
-  console.log('AppProvider re-rendered', appOverlayContextValue);
+  const appThemeContextValue = useMemo(
+    () => ({
+      ...initialAppThemeContext,
+      headerHeight: headerHeight,
+      setHeaderHeight: setHeaderHeight,
+    }),
+    [headerHeight],
+  );
+
   return (
-    <AppThemeContext.Provider value={initialAppThemeContext}>
+    <AppThemeContext.Provider value={appThemeContextValue}>
       <AppOverlayContext.Provider value={appOverlayContextValue}>{children}</AppOverlayContext.Provider>
     </AppThemeContext.Provider>
   );
