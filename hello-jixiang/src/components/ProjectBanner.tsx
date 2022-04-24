@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 const ProjectBanner = () => {
   return (
-    <ProjectBannerContainer className="flex flex-col lg:flex-row p-4 text-center">
+    <ProjectBannerContainer className="flex flex-col lg:flex-row p-4">
       <ProjectImage className="flex justify-center mb-4 lg:mb-0 lg:mr-12">
         <img src={'https://picsum.photos/536/354'}></img>
       </ProjectImage>
 
       <ProjectTitleWrapper>
         <ProjectTitle className="pb-4 lg:pb-8">Lorem Ipsum</ProjectTitle>
-        <ProjectSubTitle>
+        <ProjectSubTitle className="text-left">
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
           make a type specimen book. It has survived not only five centuries, but also the leap into electronic

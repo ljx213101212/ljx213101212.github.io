@@ -27,7 +27,7 @@ const Quotes = ({ quotes, delayInMilisecond: delay }: QuotesProps) => {
   };
 
   return (
-    <div className="flex justify-center w-full mb-6">
+    <div className="flex justify-center w-full p-4">
       {quotes.length > 0 && <QuoteComponent quote={quotes[index].quote} author={quotes[index].author} />}
     </div>
   );

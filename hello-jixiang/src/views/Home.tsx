@@ -17,9 +17,11 @@ const Home = () => {
           <div className="mt-4 mb-12 lg:mb-16 text-2xl text-center">🔧 My Projects 🔧</div>
           <ProjectBanner></ProjectBanner>
         </section>
+      </div>
 
-        <section className="quotes">
-          <div className="">
+      <div className="md:container md:mx-auto items-center px-4 leading-normal">
+        <section className="flex justify-center items-center quotes my-12 lg:my-16">
+          <div className="text-center">
             <Quotes quotes={quotes} delayInMilisecond={6500}></Quotes>
           </div>
         </section>
