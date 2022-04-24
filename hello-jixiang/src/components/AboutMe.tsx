@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { LABELS } from 'constants';
 import avatarUrl from 'assets/me.jpeg';
+import Experiences from './Experiences';
+import { epamExp, razerExp, dhiExp, personalProjects, epamProjects, razerProjects } from 'constants';
+import Projects from './Projects';
+
+const myExps = [epamExp, razerExp, dhiExp];
+const myProjs = [...personalProjects, ...epamProjects, ...razerProjects];
 
 const AboutMe = () => {
   return (
@@ -72,6 +78,23 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="md:container md:mx-auto items-center px-4 leading-normal">
+        <section className="flex flex-col pt-20 md:px-12  experience">
+          <div className="mt-2">Experience</div>
+          <div className="flex flex-col w-full mt-2">
+            <Experiences experiences={myExps}></Experiences>
+          </div>
+        </section>
+      </div>
+
+      <div className="md:container md:mx-auto items-center px-4 leading-normal">
+        <section className="flex flex-col pt-20 md:px-12 project">
+          <div className="grid grid-cols-1 md:grid-cols-3 gird-rows-1 md: grid-rows-2 gap-4 md:gap-6 w-full mt-2">
+            <Projects projects={myProjs}></Projects>
+          </div>
+        </section>
       </div>
     </>
   );
