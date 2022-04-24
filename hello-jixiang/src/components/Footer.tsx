@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { getCurrentYear } from 'utils/math';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-
+import styled from 'styled-components';
+import { hex2rgba } from 'utils/math';
+import { PRIMARY_COLOR_HEX } from 'constants';
 interface FooterProps {
   isStickyBottom: boolean;
 }
 
 const Footer = ({ isStickyBottom }: FooterProps) => {
   return (
-    <div className={`bg-white shadow py-4 text-center w-full ${isStickyBottom ? 'fixed bottom-0' : ''}`}>
+    <FooterContainer className={`bg-white shadow py-1 text-center w-full ${isStickyBottom ? 'fixed bottom-0' : ''}`}>
       <footer>
         <p className="powered-by">
           © {getCurrentYear()} · Powered By the
@@ -21,8 +23,12 @@ const Footer = ({ isStickyBottom }: FooterProps) => {
           </a>
         </p>
       </footer>
-    </div>
+    </FooterContainer>
   );
 };
 
 export default Footer;
+
+const FooterContainer = styled.div`
+  background-color: ${hex2rgba(`#${PRIMARY_COLOR_HEX}`, 0.5)};
+`;

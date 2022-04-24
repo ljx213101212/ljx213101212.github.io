@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import infiniteSVG from 'assets/icons/infinite.svg';
 import SquareDecorator from 'components/libs/SquareDecorator';
+import { PRIMARY_COLOR_HEX } from 'constants';
 
 const FirstImpression = () => {
   const appThemeContext = useContext(AppThemeContext);
@@ -15,11 +16,11 @@ const FirstImpression = () => {
       </div>
 
       <SquareDecorationWrapper className="hidden lg:block" top={'0px'} right={'0px'}>
-        <SquareDecorator row={5} col={5} colorStart={'89abe3'} colorEnd={'ffffff'}></SquareDecorator>
+        <SquareDecorator row={5} col={5} colorStart={PRIMARY_COLOR_HEX} colorEnd={'ffffff'}></SquareDecorator>
       </SquareDecorationWrapper>
 
       <SquareDecorationWrapper className="hidden lg:block" bottom={'0px'} left={'0px'}>
-        <SquareDecorator row={5} col={5} colorStart={'ffffff'} colorEnd={'89abe3'}></SquareDecorator>
+        <SquareDecorator row={5} col={5} colorStart={'ffffff'} colorEnd={PRIMARY_COLOR_HEX}></SquareDecorator>
       </SquareDecorationWrapper>
     </FirstImpressionContainer>
   );

@@ -2,6 +2,8 @@ export const EVENTS = {
   ROUTER_LOCATION_CHANGED: 'router-location-changed',
 };
 
+export const PRIMARY_COLOR_HEX = '89abe3';
+
 //Header
 export const headerData = {
   links: [
