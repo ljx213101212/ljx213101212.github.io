@@ -19,7 +19,6 @@ const Home = () => {
         <section className="flex flex-col project">
           <div className="mt-4 mb-12 lg:mb-16 text-2xl text-center">🔧 My Projects 🔧</div>
           {myProjs.map((proj) => {
-            console.log('[JX TEST]', proj);
             return (
               <ProjectBanner
                 linkUrl={proj.linkRoute}

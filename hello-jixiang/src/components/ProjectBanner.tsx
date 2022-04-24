@@ -22,7 +22,9 @@ const ProjectBanner = ({ linkUrl, imageUrl, projectTitle, projectSubtitle }: Pro
           <ProjectTitle className="pb-4 lg:pb-8 text-center lg:text-left">
             {projectTitle ?? EMPTY_STRING_PLACEHOLDER}
           </ProjectTitle>
-          <ProjectSubTitle className="text-left">{projectSubtitle ?? EMPTY_STRING_PLACEHOLDER}</ProjectSubTitle>
+          <ProjectSubTitle className="text-center lg:text-left">
+            {projectSubtitle ?? EMPTY_STRING_PLACEHOLDER}
+          </ProjectSubTitle>
         </ProjectTitleWrapper>
       </ProjectBannerContainer>
     </Link>

@@ -1,7 +1,7 @@
 {
   "homepage": "https://ljx213101212.github.io/hello-jixiang",
   "name": "hello-jixiang",
-  "version": "1.0.41",
+  "version": "1.0.45",
   "description": "",
   "main": "src/index.tsx",
   "scripts": {

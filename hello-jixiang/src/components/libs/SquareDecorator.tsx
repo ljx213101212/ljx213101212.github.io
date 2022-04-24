@@ -26,7 +26,6 @@ const SquareDecorator = ({ row, col, colorStart, colorEnd }: SquareDecoratorProp
     const diagonalCurrentStartLength = Math.hypot(curRow, curCol);
 
     const deltaHexDecimal = Math.floor((diagonalCurrentStartLength / diagonalLength) * diagonalHexDecimal);
-    console.log(diagonalCurrentStartLength, diagonalLength, diagonalHexDecimal, deltaHexDecimal);
     return operator * deltaHexDecimal;
   };
 
@@ -37,8 +36,6 @@ const SquareDecorator = ({ row, col, colorStart, colorEnd }: SquareDecoratorProp
       G_END = colorEnd.substring(2, 4);
     const B_START = colorStart.substring(4, 6),
       B_END = colorEnd.substring(4, 6);
-
-    console.log(R_START, R_END, getHexColorRGBDelta(row, col, R_START, R_END));
 
     const R = Math.abs(getDecimalFromHex(R_START) + getHexColorRGBDelta(row, col, R_START, R_END));
     const G = Math.abs(getDecimalFromHex(G_START) + getHexColorRGBDelta(row, col, G_START, G_END));

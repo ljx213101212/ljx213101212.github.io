@@ -61,12 +61,10 @@ const Header = ({ links, medias }: HeaderProps) => {
   };
 
   const onMenuOpen = () => {
-    console.log('onMenuOpen');
     appOverlayContext.setStatus(true);
   };
 
   const onMenuClose = () => {
-    console.log('onMenuClose', appOverlayContext);
     setIsMenuOpen(false);
     appOverlayContext?.setStatus?.(false);
   };

@@ -55,14 +55,12 @@ const App = () => {
           <Blogs />
         </Route>
         {myProjs.map((proj) => {
-          console.log('[JX TEST] Route - myProjs', proj);
           return (
             proj.linkRoute &&
             (isExternalURL(proj.link ?? '') ? (
               <Route
                 path={proj.linkRoute}
                 component={() => {
-                  console.log('[JX TEST] - Route', proj.link);
                   window.location.replace(proj.link ?? '#');
                   return null;
                 }}

@@ -54,7 +54,6 @@ interface ProjectCardProps extends Project {
 }
 
 export const MajorProjectCard = ({ name, startTime, endTime, description }: ProjectCardProps) => {
-  console.log('MajorProjectCard', startTime);
   return (
     <div className="card major-project-card">
       <div className="card-content">
