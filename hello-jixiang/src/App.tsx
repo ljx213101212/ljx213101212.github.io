@@ -12,6 +12,10 @@ import RouterHelper from 'components/RouterHelper';
 import { EVENTS, headerData } from 'constants';
 import Footer from 'components/Footer';
 import { AppThemeContext } from 'Provider';
+import { personalProjects, epamProjects, razerProjects } from 'constants';
+import { isExternalURL } from 'utils/string';
+
+const myProjs = [...personalProjects, ...epamProjects, ...razerProjects];
 
 const App = () => {
   const appThemeContext = useContext(AppThemeContext);
@@ -50,6 +54,25 @@ const App = () => {
         <Route path="/blogs">
           <Blogs />
         </Route>
+        {myProjs.map((proj) => {
+          console.log('[JX TEST] Route - myProjs', proj);
+          return (
+            proj.linkRoute &&
+            (isExternalURL(proj.link ?? '') ? (
+              <Route
+                path={proj.linkRoute}
+                component={() => {
+                  console.log('[JX TEST] - Route', proj.link);
+                  window.location.replace(proj.link ?? '#');
+                  return null;
+                }}
+              ></Route>
+            ) : (
+              <Route path={proj.linkRoute}></Route>
+            ))
+          );
+        })}
+
         <Route>
           <NotFound />
         </Route>

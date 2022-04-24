@@ -24,8 +24,10 @@ interface Project {
   startTime?: string;
   endTime?: string;
   link?: string;
+  linkRoute?: string;
   tasks?: string[];
   description?: string;
+  imageUrl?: string;
 }
 
 interface Quote {

@@ -1,8 +1,16 @@
+import CRM_NDA_IMAGE from 'assets/craftwork_design/crm_nda.svg';
+import GITHUB_IMAGE from 'assets/octocat.jpg';
+import CHROMA_IMAGE from 'assets/chroma.jpg';
+import ALEXA_IMAGE from 'assets/alexa.jpg';
+import SYNAPSE_IMAGE from 'assets/synapse.jpg';
+
 export const EVENTS = {
   ROUTER_LOCATION_CHANGED: 'router-location-changed',
 };
 
 export const PRIMARY_COLOR_HEX = '89abe3';
+export const IMAGE_PLACEHOLDER = 'https://picsum.photos/536/354';
+export const EMPTY_STRING_PLACEHOLDER = '-';
 
 //Header
 export const headerData = {
@@ -93,13 +101,18 @@ const PROJ_LEECODE_ILLUSTRATION = {
   startTime: '2021-12-05',
   company: 'Personal',
   link: 'https://github.com/ljx213101212/leetcode-illustrations',
+  linkRoute: '/projects/leetcode',
+  imageUrl: GITHUB_IMAGE,
   isMajor: true,
+  description: 'Targeting to build a tool to visualize the data structure of existing code',
 } as Project;
 
 const PROJ_CRM_WEB = {
-  name: 'CRM WEB (NDA)',
+  name: 'CRM WEB Project (NDA)',
   startTime: '2021-09-01',
   company: EPAM.name,
+  imageUrl: CRM_NDA_IMAGE,
+  description: 'NDA',
 };
 const PROJ_CHROMA_STUDIO = {
   name: 'Chroma Studio',
@@ -107,6 +120,9 @@ const PROJ_CHROMA_STUDIO = {
   endTime: '2020-12',
   company: RAZER.name,
   link: 'https://www.razer.com/chroma',
+  linkRoute: '/projects/chroma',
+  imageUrl: CHROMA_IMAGE,
+  description: 'Provide a solution for user to customize their own peripheral devices RGB lighting effects',
 };
 const PROJ_SYNAPSE_ALEXA = {
   name: 'Synapse Alexa',
@@ -114,6 +130,8 @@ const PROJ_SYNAPSE_ALEXA = {
   endTime: '2019-10',
   company: RAZER.name,
   link: 'https://www.razer.com/chroma/alexa',
+  imageUrl: ALEXA_IMAGE,
+  description: 'Integrated with Amazon Alexa Voice Service to config Synapse 3 software with users voice command',
 };
 const PROJ_SYNAPSE_3 = {
   name: 'Synapse 3',
@@ -121,6 +139,8 @@ const PROJ_SYNAPSE_3 = {
   endTime: '2019-02',
   company: RAZER.name,
   link: 'https://www.razer.com/synapse-3',
+  imageUrl: SYNAPSE_IMAGE,
+  description: 'An utility tools to configurate synapse-3 enabled Razer periperal devices',
 };
 
 export const personalProjects = [PROJ_LEECODE_ILLUSTRATION] as Project[];
