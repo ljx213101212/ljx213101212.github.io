@@ -1,3 +1,4 @@
+declare const __APP_VERSION__: string;
 interface NavLink {
   text: string;
   to: string;
