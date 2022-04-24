@@ -66,7 +66,7 @@ export const MajorProjectCard = ({ name, startTime, endTime, description }: Proj
         </div>
         <div className="card-body">
           <div className="major-project-name">{name}</div>
-          {description && <div className="project-message">{{ description }}</div>}
+          {description && <div className="project-message">{description}</div>}
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@ export const MinorProjectCard = ({ name, startTime, endTime, description }: Proj
         </div>
         <div className="card-body">
           <div className="minor-project-name">{name}</div>
-          {description && <div className="project-message">{{ description }}</div>}
+          {description && <div className="project-message">{description }</div>}
         </div>
       </div>
     </div>
