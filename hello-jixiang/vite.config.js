@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import { resolve } from 'path';
+import { version } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,5 +17,8 @@ export default defineConfig({
       utils: resolve(__dirname, 'src/utils'),
       Provider: resolve(__dirname, 'src/Provider'),
     },
+  },
+  define: {
+    __APP_VERSION__: JSON.stringify(version),
   },
 });

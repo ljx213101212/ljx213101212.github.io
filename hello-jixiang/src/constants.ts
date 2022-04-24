@@ -4,6 +4,8 @@ import CHROMA_IMAGE from 'assets/chroma.jpg';
 import ALEXA_IMAGE from 'assets/alexa.jpg';
 import SYNAPSE_IMAGE from 'assets/synapse.jpg';
 
+export const APP_NAME = "LI JIXIANG";
+
 export const EVENTS = {
   ROUTER_LOCATION_CHANGED: 'router-location-changed',
 };
@@ -130,6 +132,7 @@ const PROJ_SYNAPSE_ALEXA = {
   endTime: '2019-10',
   company: RAZER.name,
   link: 'https://www.razer.com/chroma/alexa',
+  linkRoute: '/projects/alexa',
   imageUrl: ALEXA_IMAGE,
   description: 'Integrated with Amazon Alexa Voice Service to config Synapse 3 software with users voice command',
 };
@@ -139,6 +142,7 @@ const PROJ_SYNAPSE_3 = {
   endTime: '2019-02',
   company: RAZER.name,
   link: 'https://www.razer.com/synapse-3',
+  linkRoute: '/projects/synapse3',
   imageUrl: SYNAPSE_IMAGE,
   description: 'An utility tools to configurate synapse-3 enabled Razer periperal devices',
 };

@@ -12,7 +12,7 @@ interface ProjectBannerProps {
 
 const ProjectBanner = ({ linkUrl, imageUrl, projectTitle, projectSubtitle }: ProjectBannerProps) => {
   return (
-    <Link key={linkUrl} to={`${linkUrl ?? '#'}`}>
+    <Link key={linkUrl} to={`${linkUrl ?? '#'}`} target="_blank" rel="noopener noreferrer">
       <ProjectBannerContainer className="flex flex-col lg:flex-row p-4">
         <ProjectImage className="flex justify-center mb-4 lg:mb-0 lg:mr-12">
           <img src={imageUrl ?? IMAGE_PLACEHOLDER}></img>
